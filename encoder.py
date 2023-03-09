@@ -7,10 +7,17 @@ def encode(phrase):  # Ryan
         if len(value) == 2:
             value -= 10
         phrase_list[index] = value
-    "".join(phrase_list)
+    return "".join(phrase_list)
+
 
 def decode(phrase):  # Michelle
-    pass
+    phrase_list = list(phrase)
+    print(phrase_list)
+    for index in range(0, len(phrase)):
+        value = phrase_list[index]
+        value -= 3
+        phrase_list[index] = value
+    return "".join(phrase_list)
 
 
 def main():
@@ -31,4 +38,3 @@ def main():
             print('Encoded phrase is', encode(phrase))
         elif option == '3':
             print('Decoded phrase is', decode(phrase))
-
